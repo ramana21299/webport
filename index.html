@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Venkata Ramana Seepana</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="side-navbar-hint" style="position: fixed; top: 48%; left: 0; z-index: 1000; background: rgba(240,240,240,0.85); color: #333; padding: 6px 12px 6px 4px; border-radius: 0 8px 8px 0; font-size: 1em; box-shadow: 1px 2px 8px rgba(44,62,80,0.06); display: flex; align-items: center; gap: 4px; pointer-events: none;">
+    <span style="font-size: 1.2em;">&#8592;</span> Side Menu
+  </div>
+  <!-- Invisible trigger zone for mouse hover detection -->
+  <div class="trigger-zone" onmouseenter="showNavbar()"></div>
+
+  <!-- Actual sidebar navigation -->
+  <div class="sidebar" id="sidebar" onmouseenter="showNavbar()" onmouseleave="hideNavbar()">
+    <a href="#home" onclick="scrollToSection('home')">
+      <i class="fa-solid fa-house-chimney" style="color: #ffffff;"></i> Home
+    </a>
+    <a href="#about" onclick="scrollToSection('about')">
+      <i class="fa-solid fa-user-astronaut" style="color: #ffffff;"></i> About Me
+    </a>
+    <a href="#skills" onclick="scrollToSection('skills')">
+      <i class="fa-solid fa-laptop-code" style="color: #ffffff;"></i> Skills
+    </a>
+    <a href="#projects" onclick="scrollToSection('projects')">
+      <i class="fa-solid fa-diagram-project" style="color: #ffffff;"></i> Projects
+    </a>
+    <a href="#timeline" onclick="scrollToSection('timeline')">
+      <i class="fa-solid fa-road" style="color: #ffffff;"></i> Timeline
+    </a>
+    <a href="#testimonials" onclick="scrollToSection('testimonials')">
+      <i class="fa-solid fa-comments" style="color: #ffffff;"></i> Testimonials
+    </a>
+    <a href="#fun" onclick="scrollToSection('fun')">
+      <i class="fa-solid fa-face-laugh-beam" style="color: #ffffff;"></i> Fun Zone
+    </a>
+    <a href="#contact" onclick="scrollToSection('contact')">
+      <i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i> Contact
+    </a>
+    <a href="#" onclick="downloadResume(); return false;">
+      <i class="fa-solid fa-file-arrow-down" style="color: #ffffff;"></i> Download Resume
+    </a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Hi, I'm <span class="highlight">Venkata Ramana Seepana</span></h1>
+          <p class="hero-subtitle">Python Full Stack Developer </p>
+          <p class="hero-description">
+            I create beautiful, functional, and user-centered digital experiences. 
+            Passionate about clean code and innovative solutions.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="scrollToSection('projects')">
+              View My Work
+            </button>
+            <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+              Get In Touch
+            </button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <!-- Interactive 3 Animation -->
+          <div class="tech-cube-container">
+            <!-- 3D Rotating Cube -->
+            <div class="cube">
+              <div class="cube-face front">
+                <i class="fa-solid fa-database"></i>
+                <span>Database</span>
+              </div>
+              <div class="cube-face back">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="cube-face right">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="cube-face left">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="cube-face top">
+                <i class="fab fa-html5"></i>
+                <span>HTML</span>
+              </div>
+              <div class="cube-face bottom">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS</span>
+              </div>
+            </div>
+            
+            <!-- Floating Tech Icons -->
+            <div class="floating-tech">
+              <div class="tech-icon" style="--delay: 0s">
+                <i class="fab fa-git-alt"></i>
+              </div>
+              <div class="tech-icon" style="--delay: 1s">
+                <i class="fab fa-docker"></i>
+              </div>
+              <div class="tech-icon" style="--delay: 2s">
+                <i class="fab fa-aws"></i>
+              </div>
+              <div class="tech-icon" style="--delay: 3s">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div class="tech-icon" style="--delay: 4s">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div class="tech-icon" style="--delay: 5s">
+                <i class="fab fa-vuejs"></i>
+              </div>
+            </div>
+            
+            <!-- Particle Effects -->
+            <div class="particles">
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+            </div>
+            
+            <!-- Glowing Rings -->
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+            <div class="ring ring-4"></div>
+          </div>
+          
+          <!-- Developer Info Card -->
+          <div class="dev-info-card">
+            <div class="card-header">
+              <div class="status-dot"></div>
+              <span>Venkata Ramana Seepana</span>
+            </div>
+              <div class="info-line">
+                <span class="label">Experience:</span>
+                <span class="value">Fresher</span>
+              </div>
+            </br>
+              <div class="info-line">
+                <span class="label">Specialty:</span>
+                <span class="value">Full Stack Development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a passionate developer with expertise in modern web technologies. 
+              I love creating applications that solve real-world problems and provide 
+              exceptional user experiences.
+            </p>
+            <p>
+              With a strong foundation in both frontend and backend development, 
+              I enjoy working on full-stack projects and learning new technologies 
+              to stay current with industry trends.
+            </p>
+            <p>
+              Enthusiastic and dedicated EEE graduate turned Python Full Stack Developer with hands-on training from Codegnan
+              IT Solutions. Strong foundation in electrical engineering combined with practical experience in web development
+              technologies including Python, Flask, JavaScript, and MySQL.
+             Adept at building responsive, scalable web applications and passionate about solving real-world problems through technology. Quick learner, excellent team player, and
+              always ready to explore new tools and frameworks.
+            </p>
+            <div class="stats">
+              <div class="stat-item">
+                <h3>0</h3>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat-item">
+                <h3>6</h3>
+                <p>Projects Completed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid">   
+          <div class="skill-item">
+          <img src="https://webdevmonk.com/main/html.png" alt="" width="60">
+            <h3>HTML</h3>
+            <p>Semantic markup and accessibility</p>
+          </div>
+          <div class="skill-item">
+            <img src="https://ralfvanveen.com/wp-content/uploads/2021/06/CSS-_-Glossary.svg" alt="" width="50">
+            <h3>CSS</h3>
+            <p>Responsive design and animations</p>
+          </div>
+          <div class="skill-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ4qe-TiNdb7kONl0a1C3a1R3H9TPWKSJeGg&s" alt="" width="50">
+            <h3>JavaScript</h3>
+            <p>ES6+ and modern frameworks</p>
+          </div>
+          <div class="skill-item">
+            <img src="https://i0.wp.com/junilearning.com/wp-content/uploads/2020/06/python-programming-language.webp?fit=1920%2C1920&ssl=1" alt="" width="50">
+            <h3>MySQL</h3>
+            <p>Managed, optimized, and secured MySQL databases for web applications</p>
+          </div>
+          <div class="skill-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmD38KsMgEwahtWc_Nfs5ZVktP9dBc36MUZA&s" alt="" width="50">
+            <h3>Flask</h3>
+            <p>Developed and deployed lightweight web applications using Python Flask</p>
+          </div>
+          <div class="skill-item">
+          <img src="https://i0.wp.com/junilearning.com/wp-content/uploads/2020/06/python-programming-language.webp?fit=1920%2C1920&ssl=1" alt="" width="50">
+            <h3>Python</h3>
+            <p>Backend and data processing</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="project-content">
+              <h3>E-Commerce Platform</h3>
+              <p>A full-stack e-commerce solution with payment integration and admin dashboard.</p>
+              <div class="project-tech">
+                <span>Flask</span>
+                <span>MySQL</span>
+                <span>html,css,JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fa-solid fa-mobile-alt"></i>
+            </div>
+            <div class="project-content">
+              <h3>Student Notes management system</h3>
+              <p>A responsive task management application with real-time updates and collaboration features.</p>
+              <div class="project-tech">
+                <span>MySQL</span>
+                <span>Flask</span>
+                <span>Frontend</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="project-content">
+              <h3>Hotel mangemnt system</h3>
+              <p>Interactive dashboard for visualizing complex data with charts and real-time updates.</p>
+              <div class="project-tech">
+                <span>Flask</span>
+                <span>MySQL</span>
+                <span>Frontend</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>venkataramanaseepana299@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h3>Phone</h3>
+                <p>+91 8885194193</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-map-marker-alt"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Eluru ["ANDHRA PRADESH"]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section">
+      <div class="container">
+        <h2>My Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2021 -2025</div>
+              <h3>student of BTECH</h3>
+              <p>Aspiring Electrical Electronics Engineer</p>
+              <div class="timeline-tech">
+                <span>MatlLab,LT spice</span>
+                <span>Python [Basics]</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2025[ jan21 - may 10 ] </div>
+              <h3>Joined Codegnan IT Solutions to gain hands-on expertise in Python Full Stack Development course.</h3>
+              <p>Built full-stack web applications using Python, Flask, and MongoDB. Gained real-time project experience and development skills.</p>
+              <div class="timeline-tech">
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>MySQL</span>
+                <span>html</span>
+                <span>CSS</span>
+                <span>Flask</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2025-.</div>
+              <h3>python full stack Developer</h3>
+              <p>As a passionate fresher, Im ready to turn ideas into real-world applications and begin my journey in software development with a forward-thinking company.</p>
+              <div class="timeline-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2>What People Say</h2>
+      <div class="testimonials-grid">
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"Ramana showed remarkable enthusiasm and technical grasp during his internship at Vizag Steel Plant. His dedication and understanding of real-time industrial systems were impressive."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="author-info">
+              <h4>Teja satya </h4>
+              <span>Internship Mentor, Vizag Steel Plant</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"Ramana developed a full-stack web project using Flask and MongoDB with great clarity and structure. His ability to break down problems and implement clean solutions stands out."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="author-info">
+              <h4>madhu sagar babu</h4>
+              <span>Project Guide, Final Year Project</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"Ramana was a highly dedicated learner during our Python Full Stack course. He completed every task with precision and often helped peers understand complex concepts."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="author-info">
+              <h4>Anusha Baditha</h4>
+              <span>Trainer, Codegnan IT Solutions</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Fun Interactive Section -->
+    <section id="fun" class="section">
+      <div class="container">
+        <h2>Let's Have Some Fun!</h2>
+        <div class="fun-content">
+          <div class="game-container">
+            <h3>Quick Code Challenge</h3>
+            <div class="code-challenge">
+              <div class="challenge-question">
+                <p>What does this code output?</p>
+                <div class="code-snippet">
+                  <code>console.log(2 + "2" + 2);</code>
+                </div>
+              </div>
+              <div class="challenge-options">
+                <button class="option-btn" onclick="checkAnswer('a')">A) 6</button>
+                <button class="option-btn" onclick="checkAnswer('b')">B) 222</button>
+                <button class="option-btn" onclick="checkAnswer('c')">C) 4</button>
+                <button class="option-btn" onclick="checkAnswer('d')">D) Error</button>
+              </div>
+              <div id="challenge-result" class="challenge-result"></div>
+            </div>
+          </div>
+          
+          <div class="fun-facts">
+            <h3>Fun Facts About Me</h3>
+            <div class="facts-grid">
+              <div class="fact-item">
+                <i class="fas fa-coffee"></i>
+                <span>I drink 5 cups of coffee daily</span>
+              </div>
+              <div class="fact-item">
+                <i class="fas fa-music"></i>
+                <span>I code best with lo-fi music</span>
+              </div>
+              <div class="fact-item">
+                <i class="fas fa-gamepad"></i>
+                <span>Gaming enthusiast</span>
+              </div>
+              <div class="fact-item">
+                <i class="fas fa-book"></i>
+                <span>Read 20+ tech books this year</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Venkata Ramana Seepana</h3>
+            <p>Full Stack Developer passionate about creating amazing digital experiences.</p>
+            <div class="social-links">
+              <a href="https://github.com/ramana21299"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/venkata-ramana-seepana/"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li>Web Development</li>
+              <li>Mobile Apps</li>
+              <li></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><i class="fas fa-envelope"></i>venkataramanaseepana9@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 8885194193</p>
+            <p><i class="fas fa-map-marker-alt"></i> Eluru ANDHRA PRADESH</p>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy;  Venkata Ramana Seepana. All rights reserved. Made with <i class="fas fa-heart"></i> and lots of technology.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
